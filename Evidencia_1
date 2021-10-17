@@ -5,6 +5,8 @@ lista = {}
 articulo = namedtuple('articulo','descripcion, piezas, precio, fecha')
 fecha_actual = datetime.date.today()
 
+#Elegir la opción que desee hacer mediante el menú
+
 while True:
     print("")
     print('** MENU **')
@@ -16,6 +18,10 @@ while True:
     op = input('¿Que desea hacer?: ')
     print("")
     
+#registrar y consultar ventas mediante folio y fechas
+#Describe el artículo 
+#Cantidad de piezas que serán
+#listado de todos los artículos a comprar
     if op == '1':
          while True:
            clave = input('Introduzca la clave: ')
@@ -27,12 +33,12 @@ while True:
                 precio = float(input('Introduzca el precio de venta: '))
                 datos = articulo(descripcion,piezas,precio,fecha_actual)
                 lista[clave] = datos
-                
                 total_venta = piezas * precio
                 suma= (total_venta + total_venta)
                 iva= float(suma * .16)
                 total_con_iva = (suma + iva)
                 
+                #calcular el IVA sumando los montos y agregando el 16% al total
                 resp = input('Desea seguir agregando [S/N]: ')
                 if resp == 'N':
                     print("--------------------------------")
