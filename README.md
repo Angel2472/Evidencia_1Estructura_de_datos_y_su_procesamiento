@@ -1,5 +1,3 @@
-
-
 from collections import namedtuple
 import datetime
 switch = True
